@@ -1,6 +1,18 @@
 body{
-background: navy;
-color: white;
+background: white;
+color: black;
 
+max-width: 500px;
+margin: auto; 
+font-family: sans-serif;
+}
+p{
+
+    line-height: 1.7;
+}
+article + article {
+    margin-top: 3erm 
+    ;
+border-top: 1px solid black;
 
 }
