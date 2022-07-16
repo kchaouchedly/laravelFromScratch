@@ -4,43 +4,26 @@
 <link rel = "stylesheet" href="/app.css">
 
 <body>
-    <article>
-
-
-    <h1 ><a href="/post"> Hello </a></h1>
-    <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, fuga blanditiis itaque architecto quibusdam veritatis reprehenderit amet eligendi corrupti officiis delectus quisquam ipsum earum officia vitae fugiat sunt enim deserunt.
-</P>
-
-
-
-
-
-    </article>
-    <article>
-
-
-<h1><a href="/post"> Hello Again </a></h1>
-<p>
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, fuga blanditiis itaque architecto quibusdam veritatis reprehenderit amet eligendi corrupti officiis delectus quisquam ipsum earum officia vitae fugiat sunt enim deserunt.
-</P>
-
-
-
-
-
-</article>
+    <?php foreach ($posts as $post) : ?>
 <article>
 
+<h1>
 
-<h1><a href="/post"> Hello Again ++  </a></h1>
-<p> 
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, fuga blanditiis itaque architecto quibusdam veritatis reprehenderit amet eligendi corrupti officiis delectus quisquam ipsum earum officia vitae fugiat sunt enim deserunt.
-</P>
+<a href="/posts/<?= $post->slug;?>">
+    <?= $post->title; ?>
+    </a>
+    <div>
+        <?= $post->excerpt; ?>
 
 
+    </div>
+
+</h1>
 
 
 
 </article>
+
+<?php endforeach; ?>
+
 </body>
